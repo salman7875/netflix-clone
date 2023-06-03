@@ -6,11 +6,12 @@ import {
   VolumeUp
 } from '@mui/icons-material'
 import './home.scss'
-import { useEffect, useState } from 'react'
-import Card from '../Card/Card'
-import axios from 'axios'
+import { Suspense, lazy, useEffect, useState } from 'react'
 import { movieURL, KEY, imageUrl } from '../../request'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+
+const Card = lazy(() => import('../Card/Card'))
 
 const Home = () => {
   const [volume, setVolume] = useState(false)
@@ -70,8 +71,15 @@ const Home = () => {
         <div> Loading... </div>
       )}
 
-      <Card type='popular' />
-      <Card type='top_rated' />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Card type='popular' />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Card type='top_rated' />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Card type='upcoming' />
+      </Suspense>
     </div>
   )
 }
