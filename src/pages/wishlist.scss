@@ -1,0 +1,12 @@
+.wishlist {
+  background-color: #000;
+  min-height: calc(100vh - 7rem);
+  width: 100%;
+  padding: 1rem 2rem;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2rem;
+  }
+}

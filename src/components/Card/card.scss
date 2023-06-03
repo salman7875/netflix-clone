@@ -1,0 +1,37 @@
+.card {
+  color: #fff;
+  padding: 1rem 2rem;
+  background-color: #000;
+  position: relative;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .box {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    img {
+      min-height: 15rem;
+      min-width: 25rem;
+      max-height: 15rem;
+      max-width: 25rem;
+      border-radius: 4px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+
+  .detail {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+  }
+}
