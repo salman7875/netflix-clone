@@ -1,3 +1,5 @@
+@import '../../style.scss';
+
 body {
   position: relative;
 }
@@ -29,6 +31,10 @@ body {
       height: 100%;
       object-fit: cover;
       margin-bottom: 2rem;
+
+      @include mobile {
+        height: 90%;
+      }
     }
 
     h1 {
@@ -39,6 +45,10 @@ body {
       bottom: 25rem;
       left: 2rem;
       color: #fff;
+
+      @include mobile {
+        top: 1rem;
+      }
     }
 
     .close {
@@ -61,6 +71,11 @@ body {
       position: absolute;
       bottom: 16rem;
       left: 2rem;
+
+      @include mobile {
+        align-items: flex-start;
+        top: 30rem;
+      }
 
       .box {
         display: flex;
@@ -107,6 +122,10 @@ body {
       left: 2rem;
       bottom: 15rem;
 
+      @include mobile {
+        top: 9rem;
+      }
+
       .match {
         color: rgb(65, 241, 65);
       }
@@ -136,6 +155,11 @@ body {
       left: 2rem;
       bottom: 5rem;
 
+      @include mobile {
+        align-items: flex-start;
+        top: 10rem;
+      }
+
       .desc {
         flex: 2;
         color: #fff;
@@ -149,9 +173,6 @@ body {
 
         .genres {
           margin-bottom: 1rem;
-        }
-
-        .available {
         }
       }
     }

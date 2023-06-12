@@ -1,16 +1,24 @@
+@import '../../style.scss';
+
 .trailer {
   width: 100%;
   height: 100vh;
   background-color: #000;
+  overflow: hidden;
 
   .wrapper {
     height: 100vh;
-    width: 800px;
+    width: 200px;
     position: relative;
 
     .video {
       width: auto;
       height: 100%;
+
+      @include mobile {
+        height: 20%;
+        width: 100%;
+      }
     }
 
     .icon {

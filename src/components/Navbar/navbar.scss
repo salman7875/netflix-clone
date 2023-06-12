@@ -1,3 +1,5 @@
+@import '../../style.scss';
+
 .navbar {
   background-color: #000000e3;
   height: 7rem;
@@ -8,6 +10,10 @@
   position: sticky;
   top: 0;
   z-index: 999;
+
+  @include mobile {
+    padding: 1rem;
+  }
 
   .left {
     flex: 1;
@@ -46,6 +52,10 @@
     align-items: center;
     justify-content: flex-end;
     gap: 2rem;
+
+    @include mobile {
+      display: none;
+    }
 
     .icon {
       font-size: 3rem;
